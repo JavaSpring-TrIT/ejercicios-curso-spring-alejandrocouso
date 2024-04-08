@@ -15,6 +15,6 @@ public interface CursosService {
 
 	Curso buscarCurso(String codigoCurso);
 
-	List<Curso> obtenerCursosPorPrecio(int precioMaximo, int precioMinimo);
+	List<Curso> obtenerCursosPorPrecio(float precioMaximo, float precioMinimo);
 
 }

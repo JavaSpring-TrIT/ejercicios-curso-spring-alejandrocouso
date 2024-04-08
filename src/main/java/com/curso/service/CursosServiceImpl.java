@@ -52,7 +52,7 @@ public class CursosServiceImpl implements CursosService {
 	}
 
 	@Override
-	public List<Curso> obtenerCursosPorPrecio(int precioMaximo, int precioMinimo) {
+	public List<Curso> obtenerCursosPorPrecio(float precioMaximo, float precioMinimo) {
 		return cursos.stream().filter(curso -> curso.getPrecio() > precioMinimo && curso.getPrecio() < precioMaximo)
 				.toList();
 	}

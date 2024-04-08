@@ -4,9 +4,9 @@ public class Curso {
 	private String codCurso;
 	private String nombre;
 	private int duracion;
-	private int precio;
+	private float precio;
 
-	public Curso(String codCurso, String nombre, int duracion, int precio) {
+	public Curso(String codCurso, String nombre, int duracion, float precio) {
 		super();
 		this.codCurso = codCurso;
 		this.nombre = nombre;
@@ -42,11 +42,11 @@ public class Curso {
 		this.duracion = duracion;
 	}
 
-	public int getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(int precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 

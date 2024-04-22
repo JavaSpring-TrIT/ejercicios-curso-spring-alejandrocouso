@@ -1,0 +1,16 @@
+spring.application.name=servicio-cursos
+springdoc.packagesToScan=com.curso.controller
+springdoc.pathsToMatch=/**
+eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+
+#Primera instancia
+server.port=8080
+eureka.instance.instance-id=instancia1
+
+#Segunda instancia
+#server.port=8081
+#eureka.instance.instance-id=instancia2
+
+#Tercera instancia
+#server.port=8082
+#eureka.instance.instance-id=instancia3

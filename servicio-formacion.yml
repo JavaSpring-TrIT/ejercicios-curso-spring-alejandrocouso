@@ -1,0 +1,6 @@
+springdoc.packagesToScan=com.curso.controller
+springdoc.pathsToMatch=/**
+server.port=8083
+app.user=user4
+app.pass=user4
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka

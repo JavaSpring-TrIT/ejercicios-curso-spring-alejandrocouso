@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -15,14 +14,18 @@ import com.curso.model.Formacion;
 
 @Service
 public class FormacionServiceImpl implements FormacionService {
-	@Autowired
-	RestClient restClient;
 	@Value("${app.user}")
 	String user;
 	@Value("${app.pass}")
 	String pass;
 
-	private String url = "http://localhost:8080/";
+	private final RestClient restClient;
+
+	public FormacionServiceImpl(RestClient.Builder restClientBuilder) {
+		restClient = restClientBuilder.build();
+	}
+
+	private String url = "http://servicio-cursos/";
 
 	@Override
 	public List<Formacion> obtenerFormaciones() {

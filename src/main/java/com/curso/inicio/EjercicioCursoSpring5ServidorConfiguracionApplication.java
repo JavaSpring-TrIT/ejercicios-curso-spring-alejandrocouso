@@ -1,0 +1,17 @@
+package com.curso.inicio;
+
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
+
+@EnableConfigServer
+@SpringBootApplication
+public class EjercicioCursoSpring5ServidorConfiguracionApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EjercicioCursoSpring5ServidorConfiguracionApplication.class, args);
+	}
+
+}

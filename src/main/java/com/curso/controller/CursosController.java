@@ -3,6 +3,7 @@ package com.curso.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,9 +26,13 @@ public class CursosController {
 	@Autowired
 	CursosService service;
 
+	@Value("${eureka.instance.instance-id}")
+	String instancia;
+
 	@Operation(summary = "Obtención de cursos", description = "Obtiene una lista de cursos sin necesidad de recibir ningún parametro")
 	@GetMapping(value = "cursos", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Curso> cursos() {
+		System.out.println("Instancia:" + instancia);
 		return service.cursos();
 	}
 

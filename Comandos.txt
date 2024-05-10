@@ -1,0 +1,5 @@
+docker build -t imagencursos .
+docker run -p 9000:8080 imagencursos
+
+docker build -t imagenformacion .
+docker run -p 9001:8083 imagenformacion

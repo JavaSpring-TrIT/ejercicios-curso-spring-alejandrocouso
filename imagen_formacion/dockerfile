@@ -1,0 +1,4 @@
+FROM openjdk:17
+ADD formacion.jar formacion.jar
+EXPOSE 8083
+ENTRYPOINT ["java","-jar","/formacion.jar"]
